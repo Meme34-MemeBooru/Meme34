@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meme34.xxx</title>
+<style>
+    * { box-sizing: border-box; }
+
+    html, body {
+        margin: 0;
+        min-height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #a8e39f;
+        color: #111;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .page {
+        width: min(100%, 1366px);
+        margin: 0 auto;
+        text-align: center;
+        padding: 18px 20px 30px;
+    }
+
+    /* Área do banner/logo */
+    .hero {
+        width: min(760px, 100%);
+        height: 385px;
+        margin: 0 auto 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: clamp(58px, 8vw, 105px);
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: -5px;
+        color: #fff;
+        text-shadow:
+            0 0 5px #00ffcc,
+            0 0 14px #00ffcc,
+            0 0 28px #00ffcc;
+        margin-bottom: 15px;
+    }
+
+    .banner-placeholder {
+        width: min(690px, 90%);
+        height: 155px;
+        border: 3px solid rgba(0, 80, 70, .65);
+        border-radius: 4px;
+        background:
+            linear-gradient(135deg, rgba(255,255,255,.15), transparent 45%),
+            #153f4a;
+        box-shadow: 0 7px 0 #0b3038;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,.75);
+        font-size: 14px;
+    }
+
+    .tagline {
+        font-family: monospace;
+        font-size: 14px;
+        margin: 8px 0 17px;
+    }
+
+    .nav {
+        margin-bottom: 2px;
+        font-size: 14px;
+    }
+
+    .nav a {
+        color: #0000aa;
+        text-decoration: underline;
+        margin: 0 8px;
+    }
+
+    .search {
+        margin: 3px auto 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .search input {
+        width: 235px;
+        height: 21px;
+        border: 1px solid #999;
+        background: white;
+        padding: 1px 4px;
+    }
+
+    .search button {
+        height: 23px;
+        padding: 1px 8px;
+        border: 1px solid #888;
+        background: #eee;
+        cursor: pointer;
+    }
+
+    .stats {
+        font-family: monospace;
+        font-size: 11px;
+        margin: 2px 0 26px;
+    }
+
+    .stats a {
+        color: #0000aa;
+    }
+
+    /* Faixa decorativa inferior */
+    .characters {
+        height: 105px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .avatar {
+        width: 48px;
+        height: 78px;
+        position: relative;
+        background: #ddd;
+        border: 2px solid #222;
+        border-radius: 48% 48% 10px 10px;
+        box-shadow: 2px 2px 0 rgba(0,0,0,.35);
+    }
+
+    .avatar::before {
+        content: "";
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        border: 2px solid #222;
+        border-radius: 50%;
+        background: #f2c7a5;
+        top: -17px;
+        left: 6px;
+    }
+
+    .avatar::after {
+        content: "MEME";
+        position: absolute;
+        left: 3px;
+        right: 3px;
+        bottom: 5px;
+        background: white;
+        border: 1px solid #222;
+        font: bold 8px Arial;
+        padding: 2px 0;
+    }
+
+    .avatar:nth-child(2n) { height: 92px; }
+    .avatar:nth-child(3n) { height: 70px; width: 42px; }
+    .avatar:nth-child(4n) { height: 82px; width: 54px; }
+
+    @media (max-width: 600px) {
+        .page { padding: 8px 10px 20px; }
+        .hero { height: 300px; }
+        .banner-placeholder { height: 120px; }
+        .characters { gap: 5px; }
+        .avatar:nth-child(n+7) { display: none; }
+    }
+</style>
+</head>
+<body>
+<main class="page">
+
+    <section class="hero">
+        <div class="logo">Meme34.xxx</div>
+        <div class="banner-placeholder">ÁREA DO BANNER</div>
+    </section>
+
+    <div class="tagline">
+        Rule 34: If it exists there is a meme of it. If not, start memeing.
+    </div>
+
+    <nav class="nav">
+        <a href="#">Posts</a>
+        <a href="#">Comments</a>
+        <a href="#">Forum</a>
+        <a href="#">My Account</a>
+    </nav>
+
+    <form class="search" onsubmit="return false;">
+        <input type="text" aria-label="Pesquisar">
+        <button>Search</button>
+    </form>
+
+    <div class="stats">
+        Serving 15,786,003 posts &nbsp; Running
+        <a href="#">MemeBoard</a> Beta 0.2
+    </div>
+
+    <div class="characters" aria-hidden="true">
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+        <div class="avatar"></div>
+    </div>
+
+</main>
+</body>
+</html>
